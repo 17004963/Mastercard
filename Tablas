@@ -1,0 +1,37 @@
+CREATE TABLE clientes(
+	niu INTEGER PRIMARY KEY,
+	telefono INTEGER,
+	nombres VARCHAR(50),
+	apellidos VARCHAR(50),
+	direccion VARCHAR(100)
+);
+
+CREATE TABLE tienda(
+	codigo_tienda INTEGER UNIQUE,
+	nombre_tienda VARCHAR(50)
+);
+
+CREATE TABLE posee(
+	num_tarjeta INTEGER PRIMARY KEY,
+	nombre_titular VARCHAR(50) NOT NULL,
+	num_seguridad INTEGER NOT NULL,
+	fecha_vencimiento DATE NOT NULL,
+	monto_disponible MONEY NOT NULL,
+	monto_autorizado MONEY NOT NULL,
+	niu INTEGER REFERENCES clientes(niu),
+);
+
+CREATE TABLE credito(
+	num_transaccion INTEGER UNIQUE,
+	fecha DATE,
+	monto MONEY,
+	num_tarjeta INTEGER REFERENCES posee(num_tarjeta)	
+);
+
+CREATE TABLE debito(
+	num_transaccion INTEGER UNIQUE,
+	fecha DATE,
+	monto MONEY,
+	num_tarjeta INTEGER REFERENCES posee(num_tarjeta),
+	codigo_tienda INTEGER REFERENCES tienda(codigo_tienda)
+);
