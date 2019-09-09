@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="mastercard.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="logo.png" />
+    <title>Registro de Usuarios</title>
+</head>
+
+<body class="fondo">
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4  border-bottom shadow-sm" style="margin-bottom: 9%; background-color:#FCB333">
+    <img src="logo.png" alt="" style="width: 5%;">
+    <nav class="my-2 my-md-0 mr-md-3">
+    </nav>
+    <a class="btn btn-outline-secondary" href="main.php" style="margin-left:85%">regresar</a>
+</div>
+
+
+<div class="row justify-content-center " >
+
+
+    <div class="col-4 border border-secondary" style="padding:0;">
+        <img src="5.jpeg" class="card-img filtro" style="height: 100%">
+        <div class="card-img-overlay text-center p_registro">
+            </div>
+    </div>
+
+    <div class="col-4 border border-secondary justify-content-center" style="background-color: white;">
+
+        <form action="registro_form.php" mehthod="GET" onsubmit="return contrasena()" >
+
+            <div class="form-group">
+                     <label for="id">DPI</label>
+                    <input type="number" class="form-control form-control-sm" name="dpi" id="id" required>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input class="form-control form-control-sm" type="text" name="email" placeholder="Em@il" id="email" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Contrasena" name='Password1'>Constrasena</label>
+                    <input type="password" class="form-control form-control-sm" name="Contrasena" id="Contrasena" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="Contrasena2" name='Password2'>Confirmar Constrasena</label>
+                    <input type="password" class="form-control form-control-sm" id="Contrasena2" required>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="id">Telefono</label>
+                    <input type="number" class="form-control form-control-sm" name='telefono' id="telefono" required>
+                </div>
+
+                <div class="form-group col-md-8">
+                    <label for="telefono">Direccion</label>
+                    <input type="input" class="form-control form-control-sm" name='direccion' id="Direccion" required> 
+                </div>
+
+                
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class=" form-control form-control-sm" name='nombre' id="nombre" placeholder="Nombre" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="Apellido">Apellidos</label>
+                    <input class="form-control form-control-sm" id="Apellido"  name='apellido' placeholder="Apellidos" required>
+                </div>
+            </div>
+
+
+
+           <button type="submit" id='submit' class="btn btn-block btn-secondary btn-outline-dark" style="color: white; margin-bottom: 3%;">Submit</button>
+        </form>
+    </div>
+
+
+</div>
+
+
+</body>
+<script src="funciones.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/76a63bf81f.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
